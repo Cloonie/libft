@@ -1,4 +1,4 @@
-int	ft_isprint(int n)
+int	ft_isprint(int c)
 {
-	return ((n >= 32 && n <= 126) ? n : 0);
+	return ((c >= 32 && c <= 126) ? c : 0);
 }

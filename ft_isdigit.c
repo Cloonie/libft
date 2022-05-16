@@ -1,6 +1,6 @@
-int ft_isdigit(int n)
+int ft_isdigit(int c)
 {
-	if (n >= '0' && n <= '9')
+	if (c >= '0' && c <= '9')
 		return (2048);
 	return (0);
 }
