@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <strings.h>
+#include "ft.h"
 
 void ft_bzero(void *s, size_t n)
 {

@@ -1,5 +1,4 @@
-#include <string.h>
-#include <stdio.h>
+#include "ft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -25,9 +24,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 /*
 int	main()
 {
-	char string[1024] = "";
+	char string[1024];
+	int i=0;
 
-	ft_memcpy(string, "abcdeasdfghj", 55);
+	ft_memcpy(string, "12345\000abcde", 11);
 	printf("%s\n", string);
+	while (i < 11)
+	{
+		printf("%c", string[i++]);
+	}
+
 }
 */
