@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 11:11:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 11:49:29 by mliew            ###   ########.fr       */
+/*   Created: 2022/05/23 11:11:37 by mliew             #+#    #+#             */
+/*   Updated: 2022/05/23 12:11:06 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*dest;
-	unsigned char	*sour;
-	int			i;
+	int i;
+	const char *dest;
+	const char *sour;
 
 	i = 0;
-	if ((dst == src) || n == 0)
-		return (dst);
-	if (!dst && !src)
-		return (0);
-	dest = (unsigned char *)dst;
-	sour = (unsigned char *)src;
-	while (i < n)
+	dest = (const char *)dst;
+	sour = (const char *)src;
+	while (i < len)
 	{
 		dest[i] = sour[i];
 		i++;
@@ -33,18 +29,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
-int	main()
-{
-	char string[1024];
-	int i=0;
-
-	ft_memcpy(string, "12345\000abcde", 11);
-	printf("%s\n", string);
-	while (i < 11)
-	{
-		printf("%c", string[i++]);
-	}
-
-}
-*/
