@@ -12,9 +12,9 @@
 
 int	ft_atoi(char *str)
 {
-	int i;
-	int isneg;
-	int nbr;
+	int	i;
+	int	isneg;
+	int	nbr;
 
 	i = 0;
 	isneg = 0;
@@ -32,7 +32,7 @@ int	ft_atoi(char *str)
 		nbr = (nbr * 10) + (str[i++] - '0');
 	if (isneg == 1)
 		return (-nbr);
-	return (nbr );
+	return (nbr);
 }
 
 /*

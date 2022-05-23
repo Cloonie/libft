@@ -6,13 +6,13 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:10:58 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 11:26:04 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/23 19:27:41 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp;
 	size_t			i;

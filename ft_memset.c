@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 16:33:48 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/23 19:31:56 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
+/*
 int	main () 
 {
 	char str[] = "This is string.h library function";
@@ -31,3 +32,4 @@ int	main ()
 	ft_memset(str,'$',10);
 	printf("%s\n", str);
 }
+*/

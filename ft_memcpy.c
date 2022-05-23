@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 17:34:55 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/23 19:30:01 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*dest;
 	unsigned char	*sour;
-	int			i;
+	int				i;
 
 	i = 0;
 	if ((dst == src) || n == 0)
