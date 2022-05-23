@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 11:50:09 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/23 16:33:48 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,20 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*tmp;
+	size_t	i;
 
 	i = 0;
-	tmp = (unsigned char *)b;
 	while (i < len)
-		tmp[i++] = c;
-	return (b = tmp);
+		((unsigned char *)b)[i++] = c;
+	return (b);
 }
-/*
+
 int	main () 
 {
 	char str[] = "This is string.h library function";
 	puts(str);
-	ft_memset(str,'X',4);
+	ft_memset(str + 8,'X',8);
 	puts(str);
-	ft_memset(str,'$',8);
+	ft_memset(str,'$',10);
 	printf("%s\n", str);
 }
-*/
