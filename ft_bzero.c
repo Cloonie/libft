@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:10:58 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 19:27:41 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/24 09:54:30 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
-		((unsigned char *)s)[i++] = '0';
+		((unsigned char *)s)[i++] = 0;
 }
 
 // int	main () 

@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/23 19:30:01 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/24 10:04:29 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,19 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*dest;
-	unsigned char	*sour;
-	int				i;
+	size_t	i;
 
 	i = 0;
 	if ((dst == src) || n == 0)
 		return (dst);
 	if (!dst && !src)
 		return (0);
-	dest = (unsigned char *)dst;
-	sour = (unsigned char *)src;
 	while (i < n)
 	{
-		dest[i] = sour[i];
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (dst);
 }
 /*
 int	main()
