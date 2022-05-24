@@ -6,32 +6,28 @@
 #    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/05/24 10:05:47 by mliew            ###   ########.fr        #
+#    Updated: 2022/05/24 18:18:36 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	ft_isalpha ft_isalnum ft_isprint ft_isascii ft_isdigit 	\
-				ft_tolower ft_toupper ft_strlen ft_bzero ft_atoi		\
-				ft_memcpy ft_memmove ft_memset ft_memcmp ft_memchr
+SRC			=	isalpha isalnum isprint isascii isdigit 	\
+				tolower toupper strlen bzero atoi		\
+				memcpy memmove memset memcmp memchr		\
+				strlcpy strlcat
 
-SRCS		= $(addsuffix .c, ${SRC})
+SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))
 
 NAME		= libft.a
 OBJS		= ${SRCS:.c=.o}
-FLAGS		= -Wall -Wextra -Werror -Idir
+CFLAGS		= -Wall -Wextra -Werror -I ./
 CC			= gcc
 RM			= rm -f
-AR			= ar rc
-RN			= ranlib
+AR			= ar rcs
 
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+all: ${NAME}
 
 ${NAME}: ${OBJS}
 	${AR} ${NAME} ${OBJS}
-	${RN} ${NAME}
-
-all: ${NAME}
 
 clean:
 	${RM} ${OBJS}
@@ -39,6 +35,6 @@ clean:
 fclean: clean
 	${RM} ${NAME}
 
-re: all fclean
+re: fclean all
 
 .PHONY: all clean fclean re
