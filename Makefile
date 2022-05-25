@@ -10,10 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	isalpha isalnum isprint isascii isdigit 	\
+SRC			=	isalpha isalnum isprint isascii isdigit \
 				tolower toupper strlen bzero atoi		\
 				memcpy memmove memset memcmp memchr		\
-				strlcpy strlcat
+				strlcpy strlcat strchr strrchr strncmp	\
+				strnstr
 
 SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))
 
