@@ -14,7 +14,9 @@ SRC			=	isalpha isalnum isprint isascii isdigit \
 				tolower toupper strlen bzero atoi		\
 				memcpy memmove memset memcmp memchr		\
 				strlcpy strlcat strchr strrchr strncmp	\
-				strnstr
+				strnstr calloc strdup substr strjoin	\
+				strtrim split itoa strmapi striteri		\
+				putchar_fd putstr_fd putendl_fd putnbr_fd
 
 SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))
 
