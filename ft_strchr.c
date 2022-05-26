@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:36:47 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/25 13:36:47 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/26 08:38:48 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != ((char)c))
 		s++;
-	if (*s == c)
+	if (*s == ((char)c))
 		return ((char *)s);
-	return ((char *)NULL);
+	return (0);
 }

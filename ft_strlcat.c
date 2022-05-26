@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:15:56 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/24 18:07:44 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/26 08:46:46 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	res = 0;
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
+	if (dstsize > len_dst)
+		res = len_dst + len_src;
+	else
+		res = len_src + dstsize;
 	while (src[i] && ((len_dst + 1) < dstsize))
 	{
 		dst[len_dst] = src[i];
 		len_dst++;
 		i++;
 	}
-	dst[len_dst] = '\0'; 
-	if (dstsize > len_dst)
-		res = len_dst + len_src;
-	else
-		res = len_src + dstsize;
+	dst[len_dst] = '\0';
 	return (res);
 }
