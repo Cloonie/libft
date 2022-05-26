@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+int	check_space(char c)
+{
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f'
+		|| c == '\r' || c == ' ')
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -21,7 +29,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	isneg = 0;
 	nbr = 0;
-	while (str[i] != '\0' && str[i] <= 32)
+	while (str[i] != '\0' && check_space(str[i]) == 1)
 		i++;
 	if (str[i] == '-')
 	{

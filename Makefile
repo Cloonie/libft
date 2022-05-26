@@ -6,7 +6,7 @@
 #    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/05/26 09:13:47 by mliew            ###   ########.fr        #
+#    Updated: 2022/05/26 13:00:20 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ SRC			=	isalpha isalnum isprint isascii isdigit \
 				tolower toupper strlen bzero atoi		\
 				memcpy memmove memset memcmp memchr		\
 				strlcpy strlcat strchr strrchr strncmp	\
-				strnstr calloc strdup substr strjoin	\
-				# strtrim split itoa strmapi striteri		\
+				strnstr calloc strdup strjoin substr	\
+				# strtrim split itoa strmapi striteri	\
 				# putchar_fd putstr_fd putendl_fd putnbr_fd
 
 SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))

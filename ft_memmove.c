@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:37 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/24 11:43:34 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/26 14:32:12 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,22 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
+	char	*s;
+	char	*d;
 
 	i = 0;
-	if (dst > src)
+	s = (char *)src;
+	d = (char *)dst;
+	if (d > s)
 	{
-		while (len--)
-			((char *)dst)[len] = ((char *)src)[len];
+		while (len-- > 0)
+			d[len] = s[len];
 	}
 	else
 	{
 		while (i < len)
 		{
-			((char *)dst)[i] = ((char *)src)[i];
+			d[i] = s[i];
 			i++;
 		}
 	}
