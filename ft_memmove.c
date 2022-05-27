@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:37 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/27 14:59:18 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/27 17:20:11 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // 	ft_memmove(dest, sour, 10);
 // 	printf("After : %s\n", dest);
 // }
-
-
 // src   2 x 3 y 4 z 5 w 6 v
 // dst				  5 h 6 e 7 l 8 l 9 o
