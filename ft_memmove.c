@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:11:37 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/26 14:32:12 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/27 14:59:18 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	s = (char *)src;
 	d = (char *)dst;
+	if (!dst && !src)
+		return (NULL);
 	if (d > s)
 	{
 		while (len-- > 0)
@@ -39,11 +41,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 // int main()
 // {
-// 	char	dest[] = "HelloWorldHello";
+// 	char	dest[] = "HelloWorld		";
 // 	char	sour[] = "1234567890";
 // 	int i = 0;
 
 // 	printf("Before: %s\n", dest);
-// 	ft_memmove(dest, sour, 5);
+// 	ft_memmove(dest, sour, 10);
 // 	printf("After : %s\n", dest);
 // }
+
+
+// src   2 x 3 y 4 z 5 w 6 v
+// dst				  5 h 6 e 7 l 8 l 9 o
