@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 09:37:27 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 10:11:06 by mliew            ###   ########.fr       */
+/*   Created: 2022/05/31 15:46:45 by mliew             #+#    #+#             */
+/*   Updated: 2022/05/31 15:47:00 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+// char my_func(unsigned int i, char str)
+// {
+// 	printf("My inner function: index = %d and %c\n", i, str);
+// 	return str - 32;
+// }
+
+// int main()
+// {
+// 	char str[10] = "hello.";
+// 	printf("The result is %s\n", str);
+// 	char *result = ft_strmapi(str, my_func);
+// 	printf("The result is %s\n", result);
+// 	return 0;
+// }
