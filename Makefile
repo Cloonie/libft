@@ -6,7 +6,7 @@
 #    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/05/31 17:38:03 by mliew            ###   ########.fr        #
+#    Updated: 2022/05/31 21:36:50 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,26 +18,26 @@ SRC			=	isalpha isalnum isprint isascii isdigit \
 				strtrim	itoa strmapi striteri	\
 				putchar_fd putstr_fd putendl_fd putnbr_fd
 # strtrim split itoa strmapi striteri
-SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))
+SRCS		= $(addprefix ft_, $(addsuffix .c, $(SRC)))
 
 NAME		= libft.a
-OBJS		= ${SRCS:.c=.o}
+OBJS		= $(SRCS:.c=.o)
 CFLAGS		= -Wall -Wextra -Werror -I ./
 CC			= gcc
 RM			= rm -f
 AR			= ar rcs
 
-all: ${NAME}
+all: $(NAME)
 
-$(NAME): ${OBJS}
-	${AR} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re

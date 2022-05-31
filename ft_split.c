@@ -6,23 +6,16 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 18:28:21 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/31 20:58:25 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	not_sep(char c, char *charset)
+int	not_sep(char s, char c)
 {
-	int	i;
-
-	i = 0;
-	while (charset[i])
-	{
-		if (c == charset[i])
-			return (0);
-		i++;
-	}
+	if (s == c)
+		return (0);
 	return (1);
 }
 
@@ -84,7 +77,9 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		i;
 	int		j;
+	char	*str;
 
+	str = (char)s;
 	i = 0;
 	res = malloc(sizeof(char *) * (countstr(s, c) + 1));
 	if (!res || *s == '\0' || c == '\0')

@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:10:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 15:33:43 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/31 21:06:29 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <strings.h>
+// # include <strings.h>
 
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
