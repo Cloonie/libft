@@ -6,7 +6,7 @@
 #    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/05/30 22:54:06 by mliew            ###   ########.fr        #
+#    Updated: 2022/05/31 10:36:01 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC			=	isalpha isalnum isprint isascii isdigit \
 				memcpy memmove memset memcmp memchr		\
 				strlcpy strlcat strchr strrchr strncmp	\
 				strnstr calloc strdup strjoin substr	\
-				strtrim	itoa	\
+				strtrim	itoa strmapi	\
 				putchar_fd putstr_fd putendl_fd putnbr_fd
 # strtrim split itoa strmapi striteri
 SRCS		= $(addprefix ft_, $(addsuffix .c, ${SRC}))
@@ -29,7 +29,7 @@ AR			= ar rcs
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
+$(NAME): ${OBJS}
 	${AR} ${NAME} ${OBJS}
 
 clean:
@@ -40,4 +40,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean

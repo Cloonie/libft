@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:03:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/30 23:08:28 by mliew            ###   ########.fr       */
+/*   Updated: 2022/05/31 09:31:14 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,8 @@ int	len(long n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*checknb(long nb, char *str, long i)
 {
-	char	*str;
-	int		i;
-	long	nb;
-
-	nb = n;
-	i = len(n);
-	str = malloc(sizeof(char) * (i + 1));
-	if (str == NULL)
-		return (NULL);
-	str[i--] = '\0';
 	if (nb == 0)
 	{
 		str[0] = 48;
@@ -59,4 +49,19 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	int		i;
+	long	nb;
+
+	nb = n;
+	i = len(n);
+	str = malloc(sizeof(char) * (i + 1));
+	if (str == NULL)
+		return (NULL);
+	str[i--] = '\0';
+	return (checknb(nb, str, i));
 }

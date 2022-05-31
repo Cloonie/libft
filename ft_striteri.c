@@ -1,41 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 11:11:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 09:25:38 by mliew            ###   ########.fr       */
+/*   Created: 2022/05/31 09:38:39 by mliew             #+#    #+#             */
+/*   Updated: 2022/05/31 10:48:46 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*)
 {
-	size_t	i;
 
-	i = -1;
-	if ((dst == src) || n == 0)
-		return (dst);
-	if (!dst && !src)
-		return (0);
-	while (++i < n)
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-	return (dst);
 }
-/*
-int	main()
-{
-	char string[1024];
-	int i=0;
-
-	ft_memcpy(string, "12345\000abcde", 11);
-	printf("%s\n", string);
-	while (i < 11)
-	{
-		printf("%c", string[i++]);
-	}
-}
-*/

@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 11:11:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 09:25:38 by mliew            ###   ########.fr       */
+/*   Created: 2022/05/31 09:37:27 by mliew             #+#    #+#             */
+/*   Updated: 2022/05/31 10:11:06 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned int	len;
+	char			*str;
 
-	i = -1;
-	if ((dst == src) || n == 0)
-		return (dst);
-	if (!dst && !src)
+	i = 0;
+	if (!s || !f)
 		return (0);
-	while (++i < n)
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-	return (dst);
-}
-/*
-int	main()
-{
-	char string[1024];
-	int i=0;
-
-	ft_memcpy(string, "12345\000abcde", 11);
-	printf("%s\n", string);
-	while (i < 11)
+	len = ft_strlen(s);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	while (i < len)
 	{
-		printf("%c", string[i++]);
+		str[i] = f(i, s[i]);
+		i++;
 	}
+	str[i] = '\0';
+	return (str);
 }
-*/
