@@ -6,7 +6,7 @@
 #    By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/06/02 17:16:29 by mliew            ###   ########.fr        #
+#    Updated: 2022/06/02 23:33:26 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MANDATORY	=	isalpha isalnum isprint isascii isdigit \
 SRCS		=	$(addprefix ft_, $(addsuffix .c, $(MANDATORY)))
 
 BONUS		=	lstnew lstadd_front lstsize lstlast lstadd_back	\
-				lstdelone lstclear lstiter #lstmap
+				lstdelone lstclear lstiter lstmap
 
 SRCSB		=	$(addprefix ft_, $(addsuffix .c, $(BONUS)))
 

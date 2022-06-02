@@ -6,14 +6,12 @@
 /*   By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/01 22:01:20 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/02 19:27:18 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Count the number of strings separated by separators.
-Return the strings' count.*/
 static int	countstr(char const *s, char c)
 {
 	int		count;
@@ -33,8 +31,6 @@ static int	countstr(char const *s, char c)
 	return (count);
 }
 
-/*Count number of characters of string seperated by separatr.
-Return the characters' count.*/
 static int	countchar(char const *s, char c)
 {
 	int	countchar;
@@ -45,9 +41,6 @@ static int	countchar(char const *s, char c)
 	return (countchar);
 }
 
-
-/*Allocate (with Ma)
-Return i which is the last pointer in 'res' array for NULL terminating.*/
 static unsigned int	putstr(char const *s, char c, char **res)
 {
 	unsigned int	i;
@@ -70,14 +63,6 @@ static unsigned int	putstr(char const *s, char c, char **res)
 	return (i);
 }
 
-/*
-**	Allocates (with malloc(3)) and returns an array of strings obtained by
-**	splitting 's' using the character 'c' as a delimiter. The array must end
-**	with a NULL pointer
-**	
-**	The ft_split() returns the array of new strings resulting from the split.
-**	Returns NULL if the allocation fails.
-*/
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
