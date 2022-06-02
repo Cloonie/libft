@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
+/*   By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:10:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 21:06:29 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/01 20:10:08 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@
 # include <string.h>
 // # include <strings.h>
 
+typedef	struct		s_list
+{
+	void			*content;
+	struct	s_list	*next;
+}					t_list;
+
+// MANDATORY
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -60,4 +67,14 @@ void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
+// BONUS
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif
