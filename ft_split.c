@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/03 15:21:00 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 17:27:14 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,12 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+void	split_words(char **array, const char *s, char c)
 {
 	int		i;
 	int		j;
 	int		k;
-	char	**array;
 
-	array = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !array)
-		return (NULL);
 	i = 0;
 	j = 0;
 	k = -1;
@@ -69,5 +65,17 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	array[j] = 0;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+
+	if (!s)
+		return (NULL);
+	array = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
+	split_words(array, s, c);
 	return (array);
 }
