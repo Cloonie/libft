@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/03 12:10:16 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 13:25:44 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,15 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		j;
 	int		k;
-	char	**split;
+	char	**array;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	array = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !array)
 		return (0);
 	i = 0;
 	j = 0;
@@ -62,11 +63,11 @@ char		**ft_split(char const *s, char c)
 			k = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && k >= 0)
 		{
-			split[j++] = word_dup(s, k, i);
+			array[j++] = word_dup(s, k, i);
 			k = -1;
 		}
 		i++;
 	}
-	split[j] = 0;
-	return (split);
+	array[j] = 0;
+	return (array);
 }
