@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/03 17:27:14 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 19:27:22 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-void	split_words(char **array, const char *s, char c)
+static void	split_words(char **array, const char *s, char c)
 {
 	int		i;
 	int		j;
