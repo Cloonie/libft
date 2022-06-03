@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 15:46:45 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 15:47:00 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 19:10:19 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
+// #include <stdio.h>
+
 // char my_func(unsigned int i, char str)
 // {
-// 	printf("My inner function: index = %d and %c\n", i, str);
+// 	printf("index = %d, str = %c\n", i, str);
 // 	return str - 32;
 // }
 

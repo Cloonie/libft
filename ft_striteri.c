@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 09:38:39 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 15:56:03 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 19:07:46 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,10 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
-	int	i2;
 
 	i = 0;
-	i2 = 0;
-	if (s && f)
-	{
-		i = ft_strlen(s);
-		while (i2 < i)
-		{
-			(*f)(i2, s);
-			s++;
-			i2++;
-		}
-	}
+	if (s == NULL)
+		return ;
+	while (*s)
+		f(i++, s++);
 }
