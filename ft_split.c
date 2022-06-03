@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:43:33 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/03 13:25:44 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 15:21:00 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 
 	array = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!s || !array)
-		return (0);
+		return (NULL);
 	i = 0;
 	j = 0;
 	k = -1;

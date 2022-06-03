@@ -6,7 +6,7 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:03:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/05/31 09:31:14 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 14:38:56 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	i = len(n);
-	str = malloc(sizeof(char) * (i + 1));
+	str = malloc(sizeof(char) * i + 1);
 	if (str == NULL)
 		return (NULL);
 	str[i--] = '\0';

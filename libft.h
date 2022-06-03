@@ -6,19 +6,16 @@
 /*   By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:10:43 by mliew             #+#    #+#             */
-/*   Updated: 2022/06/03 13:29:31 by mliew            ###   ########.fr       */
+/*   Updated: 2022/06/03 14:39:12 by mliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-// # include <strings.h>
 
 typedef struct s_list
 {

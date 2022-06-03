@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mliew <mliew@student.42kl.edu.my>          +#+  +:+       +#+         #
+#    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/06/02 23:33:26 by mliew            ###   ########.fr        #
+#    Updated: 2022/06/03 16:15:32 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,13 +33,13 @@ CC			=	gcc
 RM			=	rm -f
 AR			=	ar rcs
 
-all: $(NAME) bonus
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(OBJSB)
-	$(AR) $(NAME) $(OBJS) $(OBJSB)
+bonus: $(OBJSB)
+	$(AR) $(NAME) $(OBJSB)
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
