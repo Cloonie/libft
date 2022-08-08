@@ -6,7 +6,7 @@
 #    By: mliew < mliew@student.42kl.edu.my>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 17:58:41 by mliew             #+#    #+#              #
-#    Updated: 2022/06/03 22:32:16 by mliew            ###   ########.fr        #
+#    Updated: 2022/08/08 14:59:42 by mliew            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ CC			=	gcc
 RM			=	rm -f
 AR			=	ar rcs
 
-all: $(NAME)
+all: $(NAME) bonus
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
@@ -41,8 +41,8 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJS) $(OBJSB)
-	$(AR) $(NAME) $(OBJS) $(OBJSB)
+bonus: $(OBJSB)
+	$(AR) $(NAME) $(OBJSB)
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
